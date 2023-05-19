@@ -36,6 +36,32 @@
   answer: "c"
 }]
 
+explain- (PROCESS)
+A function is created namely "play" having to parameters "question & answer" and if, else is used to 
+print the "str" accordingly. 
+
+function play(question, answer) {
+  var userInput = readlineSync.question(question)
+
+  if (userInput === answer) {
+    console.log("You are Right!")
+    score = score + 1
+    console.log("Your score is", score)
+  } else {
+    console.log("You are wrong!")
+    score = score - 1
+    console.log("Your score is", score)
+  }
+}
+
+
+explain- "for" loop is used to get itirrate over the "keys" stored in the variable "listOfQuestion" and then 
+store it into variable "askedQuestion", then "play" function is used to print the answer. 
+
+for (var i = 0; i < listOfQuestion.length; i++) {
+  var askedQuestion = listOfQuestion[i]
+  play(askedQuestion.question, askedQuestion.answer)
+}
 
 
 
